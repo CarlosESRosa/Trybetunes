@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { MIN_LENGTH_INPUT } from '../const';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../css/login.css'
 
 export default class Login extends Component {
   constructor() {
@@ -39,19 +40,21 @@ export default class Login extends Component {
 
     return (
       <div data-testid="page-login">
-        <h1>Tela de login</h1>
-        <form>
-          <label htmlFor="inputName">
-            Name:
+        <div className='img-login-div'>
+          <img src={require('../img/logo-positiva1.png')} alt='logo positiva 1'/>
+        </div>
+        <form >
             <input
               type="text"
               id="inputName"
               name="inputName"
               data-testid="login-name-input"
+              placeholder='Nome'
               onChange={ this.handleChange }
             />
-          </label>
           <button
+            className='btn btn-primary'
+            id='login-button'
             type="button"
             data-testid="login-submit-button"
             disabled={ inputName.length < MIN_LENGTH_INPUT }

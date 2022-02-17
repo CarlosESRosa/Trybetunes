@@ -1,0 +1,33 @@
+.img-login-div {
+  width: 208px;
+  margin: 15vh auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+form input {
+  width: 519px;
+  font-size: 14px;
+  padding: 12px 16px;
+  margin-bottom: 50px;
+  height: 45px;
+  border: 1px solid #E1E5EB;
+  background-color: white;
+}
+
+form #login-button {
+  width: 519px;
+  background-color:#003BE5 ;
+  color: white;
+  font-size: 16px;
+  padding: 8px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px ;
+  cursor: pointer;
+}
