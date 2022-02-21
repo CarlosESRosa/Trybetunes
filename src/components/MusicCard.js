@@ -62,16 +62,16 @@ export default class MusicCard extends Component {
           <code>audio</code>
           .
         </audio>
-        <label htmlFor="favorite-input">
-          Favorita
-          <input
-            type="checkbox"
-            id="favorite-input"
-            data-testid={ `checkbox-music-${musicObj.trackId}` }
-            onChange={ (event) => this.fetchAddSong(event, musicObj) }
-            checked={ isChecked }
-          />
-        </label>
+        <input
+          type="checkbox"
+          id="favorite-input"
+          data-testid={ `checkbox-music-${musicObj.trackId}` }
+          onChange={ (event) => this.fetchAddSong(event, musicObj) }
+          checked={ isChecked }
+        />
+        {isChecked && 
+          <button id='favorite-button'><i class="fa-solid fa-heart"></i></button>
+        }
       </div>
     );
   }

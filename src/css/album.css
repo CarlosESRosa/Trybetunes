@@ -1,0 +1,44 @@
+.card-album-infos {
+  border-radius: 6px;
+  padding: 5px;
+  height: 400px;
+  margin-bottom: 20vh;
+}
+
+.card-album-infos img {
+  width: 70%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+}
+
+.card-album-infos h2 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36.9px;
+}
+
+.card-album-infos h3 {
+  font-size: 23px;
+}
+
+.song-box {
+  list-style: none;
+}
+
+.song-box div {
+  padding: 15px 0px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: flex-start;
+  border-top: 1px solid rgba(0, 0,0,0.2)
+}
+
+#favorite-button{
+  color: red;
+  border: none;
+  background-color: white;
+  font-size: 20px;
+}
