@@ -34,10 +34,20 @@ export default class Header extends Component {
 
     return (
       <header data-testid="header-component">
-        <p data-testid="header-user-name">{user}</p>
-        <Link to="/search" data-testid="link-to-search">Search</Link>
-        <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-        <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+        <div className='header-part1'>
+          <div className='img-header-div'>
+            <img src={require('../img/group11.png')}></img>
+          </div>
+          <div className='user-box'>
+            <img src={require('../img/char-icon.png')} ></img>
+            <p data-testid="header-user-name">{user}</p>
+          </div>
+        </div>
+        <nav className='container-fluid nav-link'>
+          <Link to="/search" data-testid="link-to-search" className='search-link col-4'>Search</Link>
+          <Link to="/favorites" data-testid="link-to-favorites" className='search-link col-4'>Favorites</Link>
+          <Link to="/profile" data-testid="link-to-profile" className='search-link col-4'>Profile</Link>
+        </nav>
       </header>
     );
   }

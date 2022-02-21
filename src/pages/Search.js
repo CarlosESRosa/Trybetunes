@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from './Loading';
+import '../css/search.css'
 
 export default class Search extends Component {
   constructor() {
@@ -48,7 +49,6 @@ export default class Search extends Component {
 
     return (
       <div data-testid="page-search">
-        <h1>Tela para pesquisar Album</h1>
         <Header />
         <form>
           <label htmlFor="artist-input">
