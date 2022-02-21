@@ -43,7 +43,7 @@ export default class Login extends Component {
         <div className='img-login-div'>
           <img src={require('../img/logo-positiva1.png')} alt='logo positiva 1'/>
         </div>
-        <form >
+        <form className='form-login'>
             <input
               type="text"
               id="inputName"

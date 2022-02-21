@@ -50,9 +50,7 @@ export default class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <form>
-          <label htmlFor="artist-input">
-            Nome do Artista:
+        <form className='container search-form'>
             <input
               name="artistName"
               id="artist-input"
@@ -60,33 +58,39 @@ export default class Search extends Component {
               type="text"
               data-testid="search-artist-input"
               onChange={ this.handleChange }
+              placeholder='Nome do Artista'
+              className='col-5'
             />
-          </label>
           <button
             type="button"
             data-testid="search-artist-button"
             disabled={ artistName.length < 2 }
             onClick={ this.clickButton }
+            className='btn btn-primary col-2'
           >
-            Pesquisar
+            Procurar
           </button>
-          { artistAlbums.length > 0
-          && <p>{`Resultado de álbuns de: ${name}`}</p> }
         </form>
+        { artistAlbums.length > 0
+        && <h2 id='resultado-albuns' className='container'>{`Resultado de álbuns de ${name}:`}</h2> }
+        <div className='container songs-container'>
         { artistAlbums.length > 0 && artistAlbums.map((element) => (
-          <div key={ element.collectionId }>
+          <div key={ element.collectionId } className="col-6 col-md-3">
+            <div className='album-card'>
+            <img src={ element.artworkUrl100 } className='img-fluid' alt={ element.collectionName } />
+            <p>
+              {element.collectionName}
+            </p>
             <Link
               to={ `/album/${element.collectionId}` }
               data-testid={ `link-to-album-${element.collectionId}` }
             >
               More infos
             </Link>
-            <p>
-              {element.collectionName}
-            </p>
-            <img src={ element.artworkUrl100 } alt={ element.collectionName } />
+            </div>
           </div>
         ))}
+        </div>
         {arrayVazio && artistAlbums.length === 0 && <p>Nenhum álbum foi encontrado</p>}
 
       </div>

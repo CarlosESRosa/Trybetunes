@@ -36,10 +36,10 @@ export default class Header extends Component {
       <header data-testid="header-component">
         <div className='header-part1'>
           <div className='img-header-div'>
-            <img src={require('../img/group11.png')}></img>
+            <img src={require('../img/group11.png')} alt='trybe icon'></img>
           </div>
           <div className='user-box'>
-            <img src={require('../img/char-icon.png')} ></img>
+            <img src={require('../img/char-icon.png')} alt='char icon' ></img>
             <p data-testid="header-user-name">{user}</p>
           </div>
         </div>
