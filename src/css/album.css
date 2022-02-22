@@ -26,19 +26,22 @@
   list-style: none;
 }
 
-.song-box div {
-  padding: 15px 0px;
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  justify-content: flex-start;
-  border-top: 1px solid rgba(0, 0,0,0.2)
+
+
+.favorite-button{
+  color: black;
+  background-color: white;
+  border: none;
+  font-size: 20px;
 }
 
-#favorite-button{
-  color: red;
-  border: none;
+.favorite-button-selected{
+  color: rgba(250,0,0, 1);
   background-color: white;
+  border: none;
   font-size: 20px;
+}
+
+.song-box .music-section {
+  border-top: 1px solid #E1E5EB;
 }

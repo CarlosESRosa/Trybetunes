@@ -10,6 +10,7 @@ export default class MusicCard extends Component {
     this.state = {
       isLoading: false,
       isChecked: false,
+      favoriteClass: 'fa-regular fa-heart favorite-button',
       favoriteSongs: [],
     };
   }
@@ -28,50 +29,57 @@ export default class MusicCard extends Component {
         element.trackId === musicObj.trackId
       ));
       if (validation) {
-        this.setState({ isChecked: true });
+        this.setState({ isChecked: true, favoriteClass:'fa-solid fa-heart favorite-button-selected' });
       }
     });
   }
 
-  fetchAddSong = async (event, musicObj) => {
-    this.setState({ isLoading: true, isChecked: event.target.checked });
+  fetchAddSong = (event, musicObj) => {
 
-    if (event.target.checked) {
-      await addSong(musicObj);
-    } else {
-      await removeSong(musicObj);
-    }
-
-    this.setState({ isLoading: false });
+    this.setState((prevState) => ({ isLoading: true, isChecked: !prevState.isChecked }), async () => {
+      const{isChecked} = this.state;
+      if (isChecked) {
+        this.setState({favoriteClass:'fa-solid fa-heart favorite-button-selected' })
+        await addSong(musicObj);
+      } else {
+        this.setState({favoriteClass:'fa-regular fa-heart favorite-button' })
+        await removeSong(musicObj);
+      }
+  
+      this.setState({ isLoading: false });
+    } );
   }
 
   render() {
     const { musicObj } = this.props;
-    const { isLoading, isChecked } = this.state;
+    const { isLoading, favoriteClass } = this.state;
 
     if (isLoading) {
       return <Loading />;
     }
 
     return (
-      <div>
-        <h4>{musicObj.trackName}</h4>
-        <audio data-testid="audio-component" src={ musicObj.previewUrl } controls>
-          <track kind="captions" />
-          O seu navegador não suporta o elemento
-          <code>audio</code>
-          .
-        </audio>
-        <input
-          type="checkbox"
-          id="favorite-input"
-          data-testid={ `checkbox-music-${musicObj.trackId}` }
-          onChange={ (event) => this.fetchAddSong(event, musicObj) }
-          checked={ isChecked }
-        />
-        {isChecked && 
-          <button id='favorite-button'><i class="fa-solid fa-heart"></i></button>
-        }
+      <div className='row  music-section py-4'>
+        <div className='col-6 d-flex align-items-center justify-content-start'>
+          <h4>{musicObj.trackName}</h4>
+        </div>
+        <div className='col-4 d-flex align-items-center justify-content-center '>
+          <audio data-testid="audio-component" src={ musicObj.previewUrl } controls>
+            <track kind="captions" />
+            O seu navegador não suporta o elemento
+            <code>audio</code>
+            .
+          </audio>
+        </div>
+        <div className='col-2 d-flex align-items-center justify-content-center'>
+            <i
+              role='button'
+              tabIndex={1}
+              id="favorite-input"
+              className={favoriteClass}
+              onClick={ (event) => this.fetchAddSong(event, musicObj) }
+            />
+        </div>
       </div>
     );
   }
