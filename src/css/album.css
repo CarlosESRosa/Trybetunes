@@ -26,8 +26,6 @@
   list-style: none;
 }
 
-
-
 .favorite-button{
   color: black;
   background-color: white;
@@ -44,4 +42,9 @@
 
 .song-box .music-section {
   border-top: 1px solid #E1E5EB;
+}
+
+
+#favorite-song-title {
+  margin-bottom: 50px;
 }
