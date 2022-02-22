@@ -1,0 +1,17 @@
+#profile-char {
+  width: 80px;
+}
+
+.perfil-infos {
+    width: 40%;
+}
+
+#profile-char-button {
+  text-align: end;
+}
+
+.perfil-title{
+  font-weight: 700;
+  margin-bottom: 0px;
+  font-size: 1.1rem;
+}
