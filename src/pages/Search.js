@@ -59,14 +59,14 @@ export default class Search extends Component {
               data-testid="search-artist-input"
               onChange={ this.handleChange }
               placeholder='Nome do Artista'
-              className='col-5'
+              className='col-12 col-md-5'
             />
           <button
             type="button"
             data-testid="search-artist-button"
             disabled={ artistName.length < 2 }
             onClick={ this.clickButton }
-            className='btn btn-primary col-2'
+            className='btn btn-primary col-12 col-md-2'
           >
             Procurar
           </button>
