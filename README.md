@@ -11,4 +11,4 @@
 
 
 ### Final result looks like
-![Result video](./result.gif)
+![Result video](./src/Trybetunes-video.gif)
