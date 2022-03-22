@@ -6,7 +6,6 @@
 - Bootstrap
 - API
 - Web Storage
-- Responsividade
 - HTML, CSS and JavaScript.
 
 #### Link: https://carlosesrosa.github.io/Trybetunes/
