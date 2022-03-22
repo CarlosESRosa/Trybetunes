@@ -9,6 +9,6 @@
 - Responsividade
 - HTML, CSS and JavaScript.
 
-
-### Final result looks like
+#### Link: https://carlosesrosa.github.io/Trybetunes/
+#### Final result looks like
 ![Result video](./src/Trybetunes-video.gif)
