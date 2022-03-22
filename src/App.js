@@ -12,7 +12,7 @@ import NotFound from './pages/NotFound';
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={ process.env.PUBLIC_URL } >
         <Route exact path="/" component={ Login } />
         <Route exact path="/search" component={ Search } />
         <Route
