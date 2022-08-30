@@ -35,5 +35,4 @@ Aplicação capaz de reproduzir músicas das mais variadas bandas e artistas atr
 </details>
 
 #### Deploy: https://carlosesrosa.github.io/Trybetunes/
-#### Resultado final
 ![Result video](./src/Trybetunes-video.gif)
