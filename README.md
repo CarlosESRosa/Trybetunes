@@ -1,13 +1,39 @@
 # Project Trybetunes
 
-### Skills involved
-- React
-- React router
-- Bootstrap
-- API
-- Web Storage
-- HTML, CSS and JavaScript.
+Aplicação capaz de reproduzir músicas das mais variadas bandas e artistas através do consumo de uma API.
 
-#### Link: https://carlosesrosa.github.io/Trybetunes/
+<details>
+  <summary>
+    <strong>Como rodar</strong>
+  </summary><br>
+
+  1. Clone o repositório
+
+  - Use o comando: `git clone git@github.com:CarlosESRosa/Trybetunes.git`.
+
+  2. Dependências
+
+  - Na raiz do projeto rode o comando: `npm install`
+
+  3. Start
+
+  - Para iniciar a aplicação rode o comando: `npm start`
+
+</details>
+
+<details>
+  <summary>
+    <strong>Habilidades envolvidas</strong>
+  </summary>
+  
+  - React
+  - React router
+  - Bootstrap
+  - API
+  - Web Storage
+  - HTML, CSS and JavaScript.
+</details>
+
+#### Deploy: https://carlosesrosa.github.io/Trybetunes/
 #### Final result looks like
 ![Result video](./src/Trybetunes-video.gif)
