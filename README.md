@@ -24,7 +24,7 @@ Aplicação capaz de reproduzir músicas das mais variadas bandas e artistas atr
 <details>
   <summary>
     <strong>Habilidades envolvidas</strong>
-  </summary>
+  </summary><br>
   
   - React
   - React router
